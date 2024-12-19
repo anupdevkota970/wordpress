@@ -1,0 +1,231 @@
+// out: false
+// Variables declaring
+@bg-clr      : #DA7258;
+@btn-bg      : #b52d0d;
+@white-color : #fff;
+@norm-padding: 50px;
+
+/* Slider Section in Homepage */
+
+.fpc-slider-area {
+    position: relative;
+}
+
+.fpc-slider-arrows {
+    position    : absolute;
+    top         : 50%;
+    width       : 100%;
+    // transform: translate(-50%, 50%);
+}
+
+.fpc-prev {
+    float      : left;
+    margin-left: 32px;
+}
+
+.fpc-next {
+    float       : right;
+    margin-right: 32px;
+}
+
+.fpc-slider-arrows .slick-arrow>* {
+    display      : inline;
+    padding      : 5px;
+    border       : 2px solid var(--color-light);
+    border-radius: 100px;
+    cursor       : pointer;
+}
+
+.fpc-slider {
+    h2 {
+        font-size    : 3rem;
+        margin-bottom: 30px;
+    }
+
+    .ct-excerpt {
+        margin-bottom: 30px;
+    }
+
+    .fpc-slide {
+        // height             : 570px;
+        background-repeat  : no-repeat;
+        background-size    : cover;
+        background-position: center;
+        position           : relative;
+
+        .fpc-slide-area {
+            >* {
+                align-self: center;
+            }
+        }
+
+        .fpc-img {
+            margin: 40px;
+        }
+
+        .fpc-mask {
+            position: absolute;
+            top     : 0;
+            left    : 0;
+
+            width : 100%;
+            height: 100%;
+
+            background-image: linear-gradient(to left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7));
+        }
+
+        .fpc-slide-content {
+            position : absolute;
+            top      : 50%;
+            left     : 10%;
+            transform: translateY(-60%);
+
+            width         : 55%;
+            color         : @white-color;
+            padding-right : 111px;
+            cursor        : text;
+            letter-spacing: normal;
+
+            * {
+                font-family: @font-fam;
+            }
+
+            a {
+                color: @white-color;
+            }
+        }
+
+        .fpc-slide-content h1 {
+            line-height: 60px;
+            font-size  : 40px;
+        }
+    }
+}
+
+.slick-dotted.slick-slider {
+    margin-bottom: 0;
+}
+
+.fpc-slider-section {
+    position     : relative;
+    height       : 570px;
+    margin-bottom: 40px;
+
+    .fpc-prev,
+    .fpc-next {
+        position : absolute;
+        top      : 50%;
+        transform: translateY(-50%);
+
+        display  : inline-block;
+        color    : @white-color;
+        font-size: 45px;
+    }
+
+    .fpc-next {
+        right: 0;
+        ;
+        padding-right: 50px;
+        cursor       : pointer;
+    }
+
+    .fpc-prev {
+        padding-left: 50px;
+        cursor      : pointer;
+    }
+}
+
+.fpc-author,
+.fpc-date,
+.fpc-comm {
+    display      : inline-block;
+    padding-right: 10px;
+    font-size    : 15px;
+}
+
+span .typcn .typcn-pen,
+.typcn-time,
+.typcn-comm,
+.fpc-icon {
+    font-size: 20px;
+}
+
+.fpc-date-tag {
+    margin-bottom: 0;
+}
+
+.fpc-author-tag,
+.fpc-date-tag,
+.fpc-comm-tag {
+    display: inline-block;
+}
+
+ul.slick-dots {
+    li {
+        button {
+            &::before {
+                font-size    : 18px;
+                color        : var(--color-dark);
+                border       : 1px solid #fff;
+                border-radius: 20px;
+            }
+        }
+    }
+}
+
+ul.slick-dots {
+    bottom       : 35px;
+    position     : relative;
+    display      : table;
+    margin       : 0 auto;
+    width        : auto;
+    border-radius: 50px
+}
+
+ul.slick-dots {
+    li.slick-active {
+        button {
+            &::before {
+                color: var(--color-dark);
+            }
+        }
+    }
+}
+
+
+// Medium devices (tablets, less than 992px)
+@media (max-width: 991.98px) {
+    .fpc-slider {
+        .fpc-slide {
+            .fpc-slide-content {
+                width: 89%;
+                left : 12%;
+            }
+        }
+    }
+}
+
+// Small devices (landscape phones, less than 768px)
+@media (max-width: 767.98px) {
+    .fpc-slider {
+        .fpc-slide {
+            .fpc-slide-content {
+                width: 98%;
+                left : 12%;
+            }
+
+            .fpc-img {
+                margin    : 0;
+                margin-top: 40px;
+
+                * {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    .fpc-slider-arrows {
+        display: none;
+    }
+}

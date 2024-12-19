@@ -1,0 +1,107 @@
+// out: false
+// Variables declaring
+@brd-clr: #ddd;
+@bg-clr: #fff;
+@nub-clr: #ff7565;
+@txt-clr: #000;
+
+// Header
+.header-logo {
+    .site-title {
+        a {
+            &:hover,
+            &:focus {
+                color: inherit;
+            }
+        }
+    }
+}
+
+.pagination,
+.post-page-numbers {
+    text-align: center;
+    width: 100%;
+
+    .pagination a {
+        transition: all 0.4s ease 0s;
+        }
+
+    span.page-numbers,
+    .current {
+        border: 1px solid @bg-clr;
+        border-radius: 20px;
+        padding: 5px 10px 5px 10px;
+        background-color: @nub-clr;
+        color: @bg-clr;
+        cursor: pointer;
+        margin-left: 5px;
+        box-shadow: rgba(255, 117, 101, 0.25) 1px 5px 3px -2px, rgba(255, 117, 101, 10.3) 0px 4px 7px -4px;
+    }
+
+    span.page-numbers.dots {
+        color: black;
+        background-color: #fff;
+        box-shadow: rgba(50, 50, 93, 0.25) 1px 5px 3px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    }
+
+    span.page-numbers.dots:hover {
+        background-color: #ff7565;
+        color: #fff;
+        box-shadow: rgba(255, 117, 101, 0.25) 1px 5px 3px -2px, #ff7565 0px 4px 7px -4px;
+        border: 1px solid #fff;
+    }
+
+    a.prev.page-numbers{
+        &::before{
+                font-family: 'icofont' !important;
+                content: '\ea7b';
+                color: @txt-clr;
+        }
+    }
+
+    a.prev.page-numbers:hover {
+        &::before {
+            color: @bg-clr;
+        }
+    }
+    
+    a.page-numbers {
+        border: 1px solid @brd-clr;
+        border-radius: 20px;
+        margin-left: 5px;
+        padding: 5px 9px;
+        line-height: 1;
+        box-shadow: rgba(50, 50, 93, 0.25) 1px 5px 3px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    }
+    
+    .page-numbers:hover {
+        background-color: @nub-clr;
+        color: @bg-clr;
+        box-shadow: rgba(255, 117, 101, 0.25) 1px 5px 3px -2px, rgba(255, 117, 101, 10.3) 0px 4px 7px -4px;
+        border: 1px solid @bg-clr;
+    }
+
+    a.next.page-numbers{
+       &::after {
+            font-family: 'icofont' !important;
+            content: '\ea7c';
+            color: @txt-clr;
+        }
+    }
+
+    a.next.page-numbers:hover {
+        &::after {
+        color: @bg-clr;
+        }
+    }
+}
+
+.post-page-numbers {
+    .page-numbers {
+        margin: 0 !important;
+    }
+}
+
+.nav-links {
+    margin-bottom: 10PX;
+}

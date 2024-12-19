@@ -1,0 +1,102 @@
+// out: false
+
+#comments {
+
+    .comment-body {
+        padding      : 15px 20px;
+        border-radius: 4px;
+    }
+
+    // Comment boxes
+    #comment,
+    input {
+        border-top: 2px solid var(--color-primary);
+        box-shadow: none;
+    }
+
+    .children {
+        margin-top: 25px;
+    }
+
+    .form-submit {
+        #submit {
+            border          : 1px solid var(--color-white);
+            border-radius   : 3px;
+            padding         : 5px 10px 5px 10px;
+            background-color: var(--color-primary);
+            color           : var(--color-white);
+            cursor          : pointer;
+            margin-left     : 0;
+            box-shadow      : rgba(255, 117, 101, 0.25) 1px 5px 3px -2px, var(--color-primary) 0px 4px 7px -4px;
+        }
+    }
+
+    // User Comments
+    .comment-list {
+        list-style : none;
+        margin-left: 0;
+
+        .comment {
+            margin-bottom: calc(var(--font-size) * 1.5);
+
+            .says {
+                border           : 0;
+                clip             : rect(1px, 1px, 1px, 1px);
+                -webkit-clip-path: inset(50%);
+                clip-path        : inset(50%);
+                height           : 1px;
+                margin           : -1px;
+                overflow         : hidden;
+                padding          : 0;
+                position         : absolute;
+                width            : 1px;
+                word-wrap        : normal !important;
+            }
+
+            .avatar {
+                border       : 2px solid var(--color-white);
+                border-radius: 50px;
+                box-shadow   : rgba(100, 100, 111, 0.2) 0px 5px 10px 0px;
+            }
+
+            .comment-meta {
+                display: flex;
+
+                .comment-metadata {
+                    display    : flex;
+                    align-items: center;
+                    margin-left: 15px;
+
+                    time {
+                        color: var(--color-light);
+                    }
+                }
+
+                .fn {
+                    margin-left: 10px;
+                }
+            }
+
+            .comment-content,
+            .reply {
+                margin-left: 52px;
+            }
+        }
+
+        .pingback,
+        .trackback {
+            margin-bottom: var(--font-size);
+        }
+
+        .edit-link {
+            margin-left  : 10px;
+            border       : 1px solid var(--color-primary);
+            padding      : 0px 5px;
+            border-radius: 15px;
+
+            a {
+                color: var(--color-primary);
+            }
+        }
+    }
+}
